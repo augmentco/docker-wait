@@ -1,0 +1,8 @@
+
+docker login --username=$dockerhub_username
+docker build -f Dockerfile .
+# image id is from "writing image sha256:the_image_id"
+# you can also find it in `docker images`
+docker tag $the_image_id augmentco/docker-wait:latest
+docker push augmentco/docker-wait
+
