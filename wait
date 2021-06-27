@@ -2,6 +2,8 @@
 
 set -e
 
+echo `env`
+
 host=$(env | grep _TCP_ADDR | cut -d = -f 2 | sort -n | head -1)
 port=$(env | grep _TCP_PORT | cut -d = -f 2 | sort -n | head -1)
 
